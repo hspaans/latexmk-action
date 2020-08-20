@@ -5,7 +5,7 @@ LABEL homepage="https://github.com/hspaans/latexmk-action"
 LABEL maintainer="Hans Spaans <hans@dailystuff.nl>"
 
 RUN apt-get update && \
-    apt-get -y install texlive-full && \
+    apt-get -y install --no-install-recommends texlive-full && \
     rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint /usr/local/bin/entrypoint
