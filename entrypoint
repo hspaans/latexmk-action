@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+
+command_string="latexmk"
+
+case "$action_format" in
+	pdf)
+		command_string="$command_string -pdf"
+	;;
+	*)
+		echo "Invalid input for action argument: formate (must be pdf)"
+		exit 1
+	;;
+esac
+
+if [ -n "$action_filename" ]
+then
+	command_string="$command_string $action_filename"
+fi
+
+echo "Command: $command_string"
+eval "$command_string"
