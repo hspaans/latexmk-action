@@ -1,7 +1,7 @@
 FROM debian:10.5-slim
 
-LABEL repository="https://github.com/hspaans/latex-action"
-LABEL homepage="https://github.com/hspaans/latex-action"
+LABEL repository="https://github.com/hspaans/latexmk-action"
+LABEL homepage="https://github.com/hspaans/latexmk-action"
 LABEL maintainer="Hans Spaans <hans@dailystuff.nl>"
 
 RUN apt-get update && \
