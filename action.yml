@@ -1,0 +1,25 @@
+---
+name: 'LaTeX'
+description: 'Use the Latex in your Github Actions.'
+
+inputs:
+  format:
+    description: "File format to generate"
+    required: true
+    default: pdf
+
+  filename:
+    description: "Source file name"
+    required: false
+    default: main.tex
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    action_command: ${{ inputs.format }}
+    action_filename: ${{ inputs.filename }}
+
+branding:
+  icon: 'package'  
+  color: 'purple'
