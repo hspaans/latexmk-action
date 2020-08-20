@@ -1,1 +1,1 @@
-# latex-action
+# latexmk-action
