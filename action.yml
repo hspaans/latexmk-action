@@ -1,5 +1,5 @@
 ---
-name: 'LaTeX'
+name: 'Latexmk'
 description: 'Use the Latex in your Github Actions.'
 
 inputs:
