@@ -7,3 +7,6 @@ LABEL maintainer="Hans Spaans <hans@dailystuff.nl>"
 RUN apt-get update && \
     apt-get -y install texlive-full && \
     rm -rf /var/lib/apt/lists/*
+
+COPY entrypoint /usr/local/bin/entrypoint
+ENTRYPOINT ["/usr/local/bin/entrypoint"]
