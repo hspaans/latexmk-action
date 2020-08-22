@@ -8,7 +8,7 @@ case "$action_format" in
 		command_string="$command_string -pdf"
 	;;
 	*)
-		echo "Invalid input for action argument: formate (must be pdf)"
+		echo "Invalid input for action argument: format (must be pdf)"
 		exit 1
 	;;
 esac
