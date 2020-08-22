@@ -17,7 +17,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    action_command: ${{ inputs.format }}
+    action_format: ${{ inputs.format }}
     action_filename: ${{ inputs.filename }}
 
 branding:
