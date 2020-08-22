@@ -1,0 +1,6 @@
+---
+repository:
+  description: GitHub Action for generating a PDF from LaTeX
+  topics: github-action, document, pdf, latex
+  delete_branch_on_merge: true
+  has_wiki: false

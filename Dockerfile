@@ -10,4 +10,6 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint /usr/local/bin/entrypoint
+RUN chmod 555 /usr/local/bin/entrypoint
+
 ENTRYPOINT ["/usr/local/bin/entrypoint"]
