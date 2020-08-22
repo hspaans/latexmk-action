@@ -1,4 +1,4 @@
-# latex-action
+# latexmk-action
 
 ## Example
 
