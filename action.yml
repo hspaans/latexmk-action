@@ -17,8 +17,8 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    action_format: ${{ inputs.format }}
-    action_filename: ${{ inputs.filename }}
+    ACTION_FORMAT: ${{ inputs.format }}
+    ACTION_FILENAME: ${{ inputs.filename }}
 
 branding:
   icon: 'book'  
