@@ -3,7 +3,7 @@ set -e
 
 command_string="latexmk"
 
-case "$action_format" in
+case "$ACTION_FORMAT" in
 	pdf)
 		command_string="$command_string -pdf"
 	;;
@@ -13,7 +13,7 @@ case "$action_format" in
 	;;
 esac
 
-if [ -n "$action_filename" ]
+if [ -n "$ACTION_FILENAME" ]
 then
 	command_string="$command_string $action_filename"
 fi
