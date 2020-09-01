@@ -15,7 +15,7 @@ esac
 
 if [ -n "$ACTION_FILENAME" ]
 then
-	command_string="$command_string $action_filename"
+	command_string="$command_string $ACTION_FILENAME"
 fi
 
 echo "Command: $command_string"
