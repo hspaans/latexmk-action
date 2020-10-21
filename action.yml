@@ -15,11 +15,11 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/hspaans/latexmk-action:1.0.6'
+  image: 'docker://ghcr.io/hspaans/latexmk-action:1.0.8'
   env:
     ACTION_FORMAT: ${{ inputs.format }}
     ACTION_FILENAME: ${{ inputs.filename }}
 
 branding:
-  icon: 'book'  
+  icon: 'book'
   color: 'gray-dark'
