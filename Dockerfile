@@ -1,5 +1,6 @@
 FROM debian:10.6-slim
 
+LABEL org.opencontainers.image.description="LaTeX container for GitHub Action latexmk"
 LABEL org.opencontainers.image.source=https://github.com/hspaans/latexmk-action
 
 LABEL repository="https://github.com/hspaans/latexmk-action"
