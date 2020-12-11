@@ -44,6 +44,6 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: github/super-linter@v3.14.0
+        uses: github/super-linter@v3.14.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
