@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Lint Code Base
-        uses: github/super-linter@v3
+        uses: github/super-linter@v3.15.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -41,7 +41,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
       - name: Run tests
         run: |
@@ -61,7 +62,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag localbuild/testimage:latest      
+        run: docker build . --file Dockerfile --tag localbuild/testimage:latest
 
       - name: Run the local Anchore scan action itself with GitHub Advanced Security code scanning integration enabled
         uses: anchore/scan-action@v2
@@ -86,7 +87,8 @@ jobs:
     if: github.event_name == 'push'
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
