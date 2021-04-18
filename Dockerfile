@@ -7,10 +7,11 @@ LABEL org.opencontainers.image.source=https://github.com/hspaans/latexmk-action
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Configure apt and install packages
+# hadolint ignore=DL3008
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     # Install texlive-full
-    && apt-get -y install --no-install-recommends texlive-full=2018.20190227-2 \
+    && apt-get -y install --no-install-recommends texlive-full \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
