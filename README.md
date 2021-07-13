@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate PDF document
-        uses: hspaans/latexmk-action@v1.0.13
+        uses: hspaans/latexmk-action@v1.0.14
         with:
           format: pdf
           filename: article.tex
