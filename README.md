@@ -10,7 +10,7 @@ Following parameters can be used as `step.with` keys:
 
 | Name       | Type   | Default    | Description                          |
 | ---------- | ------ | ---------- | ------------------------------------ |
-| `formay`   | String | `pdf`      | Output format for the LaTeX filename |
+| `format`   | String | `pdf`      | Output format for the LaTeX filename |
 | `filename` | String | `main.tex` | Source LaTeX filename to process     |
 
 ## Example
@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate PDF document
-        uses: hspaans/latexmk-action@v1.0.14
+        uses: hspaans/latexmk-action@v1.1.0
         with:
           format: pdf
           filename: article.tex
