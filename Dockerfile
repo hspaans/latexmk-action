@@ -11,8 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     # Install texlive-full
-    && apt-get -y install --no-install-recommends texlive-full \
-        python3-pygments \ # Install dependency for minted (#69)
+    && apt-get -y install --no-install-recommends texlive-full python3-pygments \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
