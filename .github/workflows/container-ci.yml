@@ -20,6 +20,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GITHUB_ACTIONS: false
+          VALIDATE_NATURAL_LANGUAGE: false
 
   # Run tests.
   # See also https://docs.docker.com/docker-hub/builds/automated-testing/
