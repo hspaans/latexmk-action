@@ -22,8 +22,6 @@ ENV DEBIAN_FRONTEND=dialog
 
 # Install LaTeX test files
 RUN mkdir -p /usr/local/src/latexmk/test
-COPY main.bib /usr/local/src/latexmk/test/main.bib
-COPY rfc.bib /usr/local/src/latexmk/test/rfc.bib
 COPY article.tex /usr/local/src/latexmk/test/article.tex
 
 # Configure entrypoint for GitHub Action
