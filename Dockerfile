@@ -21,8 +21,10 @@ RUN apt-get update \
 ENV DEBIAN_FRONTEND=dialog
 
 # Install LaTeX test files
-COPY *bib /usr/local/src
-COPY *tex /usr/local/src
+RUN mkdir -p /usr/local/src/latexmk/test
+COPY main.bib /usr/local/src/latexmk/test/main.bib
+COPY rfc.bib /usr/local/src/latexmk/test/rfc.bib
+COPY article.tex /usr/local/src/latexmk/test/article.tex
 
 # Configure entrypoint for GitHub Action
 COPY entrypoint /usr/local/bin/entrypoint

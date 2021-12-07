@@ -4,4 +4,4 @@ version: '3'
 services:
   sut:
     build: .
-    command: latexmk /usr/local/src/article.tex
+    command: latexmk /usr/local/src/latexmk/test/article.tex
