@@ -1,0 +1,9 @@
+---
+version: '3'
+
+services:
+  sut:
+    build: .
+    environment:
+      - ACTION_FORMAT=pdf
+      - ACTION_FILENAME=/usr/local/src/latexmk/test/article.tex
