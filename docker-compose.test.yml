@@ -4,4 +4,6 @@ version: '3'
 services:
   sut:
     build: .
-    command: latexmk -pdf /usr/local/src/latexmk/test/article.tex
+    environment:
+      - ACTION_FORMAT=pdf
+      - ACTION_FILENAME=/usr/local/src/latexmk/test/article.tex
