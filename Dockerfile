@@ -20,6 +20,8 @@ RUN apt-get update \
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
 
+COPY *{bib,tex} /usr/local/src
+
 # Configure entrypoint for GitHub Action
 COPY entrypoint /usr/local/bin/entrypoint
 RUN chmod 555 /usr/local/bin/entrypoint

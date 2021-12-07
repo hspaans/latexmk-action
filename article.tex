@@ -1,0 +1,112 @@
+\documentclass[10pt,a4paper,twoside,twocolumn]{article}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{natbib}
+
+% \usepackage{charter}        % Set default font to Charter
+
+\title{Title}
+\author{John Doe \texttt{<john.doe@example.org>}}
+\date{\today}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+
+Lorem ipsum dolor\cite{JS2015} sit amet, consectetur adipiscing\cite{rfc2119} elit. Etiam malesuada massa at velit fringilla, a semper dui convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ut velit arcu. In imperdiet iaculis dui, ut pretium felis bibendum nec. Nullam a vestibulum lorem. Etiam eget lacinia turpis. Mauris est tortor, condimentum sed rutrum vitae, tincidunt ut nisi. Pellentesque dui nibh, condimentum ultrices augue eget, consectetur cursus nibh. Morbi ut vulputate urna, sit amet lobortis neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque sodales scelerisque diam nec malesuada. Sed rutrum at ante eu feugiat. Ut elit lorem, hendrerit et faucibus non, convallis id urna.
+
+\end{abstract}
+
+\section{Introduction}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo sem, lobortis ut ipsum faucibus, aliquam lobortis velit. Pellentesque efficitur condimentum magna, et varius augue elementum a. Sed id maximus leo. Praesent augue quam, semper sit amet volutpat eu, cursus non metus. In eget dapibus ligula. In efficitur ante sed justo condimentum, ut pellentesque ligula mollis. Maecenas tincidunt laoreet vulputate. Ut malesuada auctor tellus, vel finibus leo malesuada eget.
+
+\begin{itemize}
+  \item One
+  \item Two
+  \item Three
+\end{itemize}
+
+Aliquam pellentesque risus augue, ac tempor magna sagittis nec. Praesent pharetra tincidunt sem. Ut id leo at dolor scelerisque tempus. Ut lacus quam, vehicula non venenatis non, varius ac tortor. Praesent eleifend nunc in elit dictum, non blandit massa congue.
+
+\begin{enumerate}
+  \item One
+    \begin{enumerate}
+      \item Two
+      \item Three
+      \item Four
+  \end{enumerate}
+  \item Five
+  \item Six
+\end{enumerate}
+
+Etiam viverra, elit a elementum eleifend, est odio semper orci, eu sollicitudin leo eros quis erat. Nam est metus, posuere eget neque ac, rutrum condimentum dui.
+
+\section{First section}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo sem, lobortis ut ipsum faucibus, aliquam lobortis velit. Pellentesque efficitur condimentum magna, et varius augue elementum a. Sed id maximus leo. Praesent augue quam, semper sit amet volutpat eu, cursus non metus. In eget dapibus ligula. In efficitur ante sed justo condimentum, ut pellentesque ligula mollis. Maecenas tincidunt laoreet vulputate. Ut malesuada auctor tellus, vel finibus leo malesuada eget. Morbi fermentum condimentum sollicitudin. Sed finibus justo lectus, at commodo odio cursus porttitor. Etiam diam velit, rhoncus a fermentum nec, gravida vel augue. Aliquam in rutrum odio, vel placerat nisl. Donec suscipit est a mauris lobortis, et vulputate lacus dignissim. Proin sit amet metus quis augue tristique viverra in non sem. Nam lobortis sed lectus ullamcorper bibendum.
+
+\begin{equation}
+E=mc^2
+\end{equation}
+
+Aliquam pellentesque risus augue, ac tempor magna sagittis nec. Praesent pharetra tincidunt sem. Ut id leo at dolor scelerisque tempus. Ut lacus quam, vehicula non venenatis non, varius ac tortor. Praesent eleifend nunc in elit dictum, non blandit massa congue. Etiam viverra, elit a elementum eleifend, est odio semper orci, eu sollicitudin leo eros quis erat. Nam est metus, posuere eget neque ac, rutrum condimentum dui.
+
+\[ x^n + y^n = z^n \]
+
+Aenean interdum nunc ante, ut ornare sapien vulputate vitae. Cras laoreet mollis rhoncus. In ac eleifend mi. Proin feugiat eleifend neque, id semper tellus luctus sit amet. Suspendisse sagittis diam nec metus pellentesque dapibus. Sed commodo lacinia enim vel rhoncus. Phasellus finibus id magna eget bibendum. Aliquam tristique a enim at venenatis. Suspendisse potenti. Proin libero libero, sollicitudin eget massa nec, sagittis feugiat nulla. Fusce varius blandit nisi quis dapibus. Proin laoreet lacus ac justo mollis aliquam. Vivamus velit ligula, sagittis non sollicitudin nec, molestie non tortor. Fusce a lacinia est. Vivamus ut elementum odio. Vestibulum nec mauris molestie, fermentum risus in, pulvinar metus.
+
+\section{Second section}
+
+Aenean interdum nunc ante, ut ornare sapien vulputate vitae. Cras laoreet mollis rhoncus. In ac eleifend mi. Proin feugiat eleifend neque, id semper tellus luctus sit amet. Suspendisse sagittis diam nec metus pellentesque dapibus. Sed commodo lacinia enim vel rhoncus. Phasellus finibus id magna eget bibendum. Aliquam tristique a enim at venenatis. Suspendisse potenti. Proin libero libero, sollicitudin eget massa nec, sagittis feugiat nulla. Fusce varius blandit nisi quis dapibus. Proin laoreet lacus ac justo mollis aliquam. Vivamus velit ligula, sagittis non sollicitudin nec, molestie non tortor. Fusce a lacinia est. Vivamus ut elementum odio. Vestibulum nec mauris molestie, fermentum risus in, pulvinar metus.
+
+\lstinputlisting[language=ksh,basicstyle=\small\ttfamily,breaklines=true,showtabs=false,showspaces=false,breakatwhitespace=true,caption={Listing Caption},captionpos=b]{example.yml}
+
+\section{Third section}
+
+Donec consectetur aliquet urna, sit amet elementum mi pretium ut. In sit amet velit rhoncus, dictum erat at, consequat metus. Vestibulum sit amet finibus ex, vel malesuada metus. Morbi bibendum feugiat nulla. Vestibulum mauris sapien, euismod et suscipit nec, maximus vel massa. In hac habitasse platea dictumst. In pharetra egestas nisi, ut porttitor neque scelerisque eget.
+
+\subsection{First subitem}
+
+Aenean consequat nunc et augue semper hendrerit. Aenean auctor dui non odio gravida, et pretium libero molestie. Fusce a tempus purus, quis egestas ligula.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\multicolumn{1}{c}{\textbf{Name}} & \textbf{R0} & \textbf{R1} \\ \midrule
+\multicolumn{1}{|l|}{Item 1} & \multicolumn{1}{c|}{1.0\%} & \multicolumn{1}{c|}{1.0\%} \\ \midrule
+\multicolumn{1}{|l|}{Item 2} & \multicolumn{1}{c|}{2.0\%} & \multicolumn{1}{c|}{2.2\%} \\ \midrule
+\multicolumn{1}{r}{Average Summery} & \multicolumn{1}{l}{1.5\%} & \multicolumn{1}{l}{1.6\%} \\ \bottomrule
+\end{tabular}
+\caption{Table caption}\label{tab:table-ref}
+\end{table}
+
+Sed a tempus elit. Nullam blandit nec ipsum quis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc accumsan sem nisl, nec ornare ex viverra sit amet. Sed ullamcorper augue non erat semper scelerisque. Curabitur mi odio, sollicitudin euismod urna et, blandit vulputate diam. Sed eu suscipit libero. Sed lacinia consequat interdum. Nam pretium velit ut sapien mattis, vitae imperdiet ex pulvinar. Sed ac ante ac dui consequat egestas. Suspendisse convallis leo nec blandit sagittis.
+
+\subsection{Second subsection}
+
+Vivamus neque magna, finibus vel volutpat ornare, luctus in purus. Aliquam vitae facilisis quam. Ut iaculis libero laoreet vulputate euismod. Pellentesque ex quam, mollis quis nisl ut, ultricies malesuada justo. Integer eget posuere nulla. Suspendisse vulputate magna lacus, in tempus felis commodo vitae. Nunc a magna posuere, blandit velit vitae, bibendum neque. Quisque egestas orci sit amet turpis luctus eleifend. Morbi rhoncus eget turpis eget suscipit. Fusce suscipit nulla placerat, pretium turpis sit amet, rutrum massa. Aliquam erat volutpat. Cras ut luctus dolor, sed rhoncus nisi. Aenean a laoreet tortor. Maecenas imperdiet semper nunc, vitae auctor nibh convallis feugiat. Aliquam lobortis, metus a ultricies volutpat, mauris dolor dictum nunc, tincidunt interdum est sapien vulputate augue. Quisque sodales finibus leo, sit amet volutpat massa viverra at.
+
+\subsubsection{First subsubsection}
+
+Suspendisse potenti. Proin egestas tempor leo eget facilisis. Nunc congue nisi quis ipsum eleifend efficitur. Vestibulum eget nisl eget mauris lacinia fermentum eu vel metus. Cras non rutrum nisi. Fusce enim dui, consequat eu volutpat quis, accumsan id metus. Maecenas ornare placerat pellentesque. In lorem sem, dapibus rutrum erat eu, malesuada gravida lacus. Aliquam blandit lorem felis. Phasellus porttitor tempor purus ac ornare. Cras sit amet leo eget mi consectetur volutpat id eu risus. Mauris quis ipsum tortor. Nulla sem mi, feugiat ut pulvinar efficitur, luctus eget lectus. Proin tellus urna, accumsan sit amet ultricies maximus, ultricies ut dui. Maecenas porttitor vestibulum posuere. Cras accumsan viverra lacus ac feugiat.
+
+\subsubsection{Second subsubsection}
+
+Aliquam erat volutpat. Cras ante dolor, aliquet sed neque quis, iaculis suscipit ex. Cras eu odio non ipsum malesuada pharetra. Curabitur consectetur vulputate lobortis. Duis auctor faucibus urna, non commodo orci. Sed viverra efficitur est at auctor. Mauris enim nulla, iaculis fermentum magna eget, laoreet vulputate ipsum. Nulla mollis, ex id pretium varius, ante urna egestas nunc, sit amet iaculis massa urna nec ipsum. Maecenas posuere orci sit amet semper gravida. Sed iaculis euismod massa, in dignissim nibh faucibus vel. Phasellus tincidunt odio id nisi dapibus volutpat. Donec feugiat leo et justo hendrerit, sed bibendum nunc mollis.
+
+\appendix
+\section{About this document}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sem eros, scelerisque eu egestas a, pulvinar vitae lorem. Quisque malesuada lorem lobortis convallis lacinia. Morbi egestas dui id ex cursus, ut accumsan lectus posuere. Phasellus sit amet pellentesque mi. Morbi nec augue arcu. Praesent ante enim, cursus ornare commodo aliquam, vulputate et est. Curabitur id consectetur enim, at accumsan ipsum. Donec justo ligula, pharetra at vulputate ac, convallis nec mi. Nunc ac dolor semper, porta velit id, sollicitudin mauris. Morbi volutpat nisi et arcu finibus, vel convallis arcu rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer blandit nibh nec tortor dictum, ut feugiat leo tristique.
+
+\bibliographystyle{plain}
+% Source for RFC is https://tm.uka.de/~bless/bibrfcindex.html
+% URL: https://tm.uka.de/~bless/rfc.bib
+\bibliography{main,rfc}
+
+\end{document}

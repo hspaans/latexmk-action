@@ -1,0 +1,8 @@
+.github
+.vscode
+docker-compose.test.yml
+Dockerfile
+run_tests.sh
+*md
+!README.md
+!SECURITY.md
