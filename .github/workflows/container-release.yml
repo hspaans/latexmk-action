@@ -1,5 +1,5 @@
 ---
-name: Release
+name: Container Release
 
 on:
   push:
