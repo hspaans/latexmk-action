@@ -5,10 +5,26 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    target-branch: master
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    target-branch: master
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly
+    target-branch: v1
     open-pull-requests-limit: 10
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: monthly
+    target-branch: v1
     open-pull-requests-limit: 10
