@@ -7,5 +7,6 @@ on:
     - cron: '20 20 8 * *'
 
 jobs:
-  container-ci:
-    uses: hspaans/.github/.github/workflows/container-ci.yml@v0.2.0
+  reusable-workflow:
+    name: Reusable workflow
+    uses: hspaans/.github/.github/workflows/container-ci.yml@master
