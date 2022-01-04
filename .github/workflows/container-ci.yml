@@ -2,9 +2,16 @@
 name: Container CI
 
 on:
+  push:
+    branches:
+      - master
+      - v*
   pull_request:
+    branches:
+      - master
+      - v*
   schedule:
-    - cron: '20 20 8 * *'
+    - cron: '17 14 * * 2'
 
 jobs:
   reusable-workflow:
