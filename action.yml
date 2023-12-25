@@ -15,7 +15,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/hspaans/latexmk-action:latest'
+  image: 'Dockerfile'
   env:
     ACTION_FORMAT: ${{ inputs.format }}
     ACTION_FILENAME: ${{ inputs.filename }}
