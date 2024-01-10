@@ -14,7 +14,14 @@ case "$ACTION_FORMAT" in
 esac
 if [ ! "$ACTION_ARGS" = "" ]; then
     for arg in $ACTION_ARGS; do
-        command_string="$command_string $arg"
+        case "$arg" in
+            -pvc)
+                continue
+                ;;
+            *)
+                command_string="$command_string $arg"
+                ;;
+        esac
     done
 fi
 
