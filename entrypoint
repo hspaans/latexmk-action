@@ -13,7 +13,7 @@ case "$ACTION_FORMAT" in
         ;;
 esac
 if [ ! "$ACTION_ARGS" = "" ]; then
-    for arg in "${ACTION_ARGS[@]}"; do
+    for arg in $ACTION_ARGS; do
         command_string="$command_string $arg"
     done
 fi
