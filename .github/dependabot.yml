@@ -4,7 +4,7 @@ updates:
   - package-ecosystem: docker
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     groups:
       Docker:
         patterns:
@@ -14,8 +14,7 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
-      day: saturday
+      interval: monthly
     groups:
       GitHub-Actions:
         patterns:
@@ -26,7 +25,6 @@ updates:
     directory: /
     schedule:
       interval: monthly
-      day: saturday
     groups:
       Docker:
         patterns:
@@ -37,7 +35,6 @@ updates:
     directory: /
     schedule:
       interval: monthly
-      day: saturday
     groups:
       GitHub-Actions:
         patterns:
