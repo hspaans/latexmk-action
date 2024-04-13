@@ -1,4 +1,4 @@
-FROM ubuntu:mantic-20240216
+FROM debian/bookworm-20240408
 
 LABEL org.opencontainers.image.description="LaTeX container for GitHub Action latexmk"
 LABEL org.opencontainers.image.source=https://github.com/hspaans/latexmk-action
