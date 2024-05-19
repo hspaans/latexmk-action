@@ -1,0 +1,27 @@
+---
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "master", "v1" ]
+  pull_request:
+    branches: [ "master", "v1" ]
+
+jobs:
+    
+  build-test:
+    name: Container Test Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Run tests
+        run: |
+          if [ -f docker-compose.test.yml ]; then
+            docker-compose --file docker-compose.test.yml build
+            docker-compose --file docker-compose.test.yml run sut
+          else
+            docker build . --file Dockerfile
+          fi
