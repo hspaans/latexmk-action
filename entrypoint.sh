@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -e
 
 command_string="latexmk"
@@ -12,6 +13,11 @@ case "$ACTION_FORMAT" in
 		exit 1
 	;;
 esac
+
+if [ -n "$ACTION_OPTIONS" ]
+then
+	command_string="$command_string $ACTION_OPTIONS"
+fi
 
 if [ -n "$ACTION_FILENAME" ]
 then

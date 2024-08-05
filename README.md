@@ -12,6 +12,7 @@ Following parameters can be used as `step.with` keys:
 | ---------- | ------ | ---------- | ------------------------------------ |
 | `format`   | String | `pdf`      | Output format for the LaTeX filename |
 | `filename` | String | `main.tex` | Source LaTeX filename to process     |
+| `options`  | String |            | Additional options for latexmk       |
 
 ## Example
 
@@ -29,10 +30,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate PDF document
-        uses: hspaans/latexmk-action@v1
+        uses: hspaans/latexmk-action@v2.0.0
         with:
           format: pdf
           filename: article.tex
+          options: -shell-escape
 ```
 
 ## Keep up-to-date with GitHub Dependabot
