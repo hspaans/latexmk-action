@@ -12,6 +12,18 @@ case "$ACTION_FORMAT" in
 		exit 1
 	;;
 esac
+if [ ! "$ACTION_ARGS" = "" ]; then
+    for arg in $ACTION_ARGS; do
+        case "$arg" in
+            -pvc)
+                continue
+                ;;
+            *)
+                command_string="$command_string $arg"
+                ;;
+        esac
+    done
+fi
 
 if [ -n "$ACTION_FILENAME" ]
 then

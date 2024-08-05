@@ -13,12 +13,18 @@ inputs:
     required: false
     default: main.tex
 
+  arguments:
+    description: "Arguments passed to latexmk"
+    required: false
+    default: ""
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
     ACTION_FORMAT: ${{ inputs.format }}
     ACTION_FILENAME: ${{ inputs.filename }}
+    ACTION_ARGS: ${{ inputs.arguments }}
 
 branding:
   icon: 'book'
