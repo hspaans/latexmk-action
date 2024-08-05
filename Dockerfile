@@ -25,7 +25,7 @@ RUN mkdir -p /usr/local/src/latexmk/test
 COPY article.tex /usr/local/src/latexmk/test/article.tex
 
 # Configure entrypoint for GitHub Action
-COPY entrypoint /usr/local/bin/entrypoint
-RUN chmod 555 /usr/local/bin/entrypoint
+COPY entrypoint /usr/local/bin/entrypoint.sh
+RUN chmod 555 /usr/local/bin/entrypoint.sh
 
-ENTRYPOINT ["/usr/local/bin/entrypoint"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
