@@ -24,6 +24,7 @@ runs:
   env:
     ACTION_FORMAT: ${{ inputs.format }}
     ACTION_FILENAME: ${{ inputs.filename }}
+    ACTION_OPTIONS: ${{ inputs.options }}
 
 branding:
   icon: 'book'
