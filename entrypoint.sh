@@ -16,7 +16,23 @@ esac
 
 if [ -n "$ACTION_OPTIONS" ]
 then
-	command_string="$command_string $ACTION_OPTIONS"
+	for option in $ACTION_OPTIONS
+	do
+		case "$option" in
+			-pdf)
+				continue
+				;;
+			-pv)
+				continue
+				;;
+			-pvc)
+				continue
+				;;
+			*)
+				command_string="$command_string $option"
+				;;
+		esac
+	done
 fi
 
 if [ -n "$ACTION_FILENAME" ]
