@@ -12,8 +12,11 @@ Following parameters can be used as `step.with` keys:
 | ---------- | ------ | ---------- | ------------------------------------ |
 | `format`   | String | `pdf`      | Output format for the LaTeX filename |
 | `filename` | String | `main.tex` | Source LaTeX filename to process     |
+| `options`  | String |            | Additional options for latexmk       |
 
 ## Example
+
+Example workflow to generate a PDF document from a LaTeX file:
 
 ```yaml
 ---
@@ -29,9 +32,31 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate PDF document
-        uses: hspaans/latexmk-action@v1
+        uses: hspaans/latexmk-action@v2.0.0
         with:
           format: pdf
+          filename: article.tex
+          options: -shell-escape
+```
+
+Example workflow to generate a PDF document from a LaTeX file `article.tex` with a configuration file `.latexmkrc`:
+
+```yaml
+---
+name: CI
+
+on: [push]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Generate PDF document
+        uses: hspaans/latexmk-action@v2.0.0
+        with:
           filename: article.tex
 ```
 
