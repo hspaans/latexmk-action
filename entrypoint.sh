@@ -4,35 +4,40 @@ set -e
 
 command_string="latexmk"
 
-case "$ACTION_FORMAT" in
-	pdf)
-		command_string="$command_string -pdf"
-	;;
-	*)
-		echo "Invalid input for action argument: format (must be pdf)"
-		exit 1
-	;;
-esac
-
-if [ -n "$ACTION_OPTIONS" ]
+if [ -f "latexmkrc" || -f ".latexmkrc" ]
 then
-	for option in $ACTION_OPTIONS
-	do
-		case "$option" in
-			-pdf)
-				continue
-				;;
-			-pv)
-				continue
-				;;
-			-pvc)
-				continue
-				;;
-			*)
-				command_string="$command_string $option"
-				;;
-		esac
-	done
+	echo "latexmkrc file found"
+else
+	case "$ACTION_FORMAT" in
+		pdf)
+			command_string="$command_string -pdf"
+		;;
+		*)
+			echo "Invalid input for action argument: format (must be pdf)"
+			exit 1
+		;;
+	esac
+
+	if [ -n "$ACTION_OPTIONS" ]
+	then
+		for option in $ACTION_OPTIONS
+		do
+			case "$option" in
+				-pdf)
+					continue
+					;;
+				-pv)
+					continue
+					;;
+				-pvc)
+					continue
+					;;
+				*)
+					command_string="$command_string $option"
+					;;
+			esac
+		done
+	fi
 fi
 
 if [ -n "$ACTION_FILENAME" ]

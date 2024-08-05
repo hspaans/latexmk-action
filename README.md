@@ -16,6 +16,8 @@ Following parameters can be used as `step.with` keys:
 
 ## Example
 
+Example workflow to generate a PDF document from a LaTeX file:
+
 ```yaml
 ---
 name: CI
@@ -35,6 +37,27 @@ jobs:
           format: pdf
           filename: article.tex
           options: -shell-escape
+```
+
+Example workflow to generate a PDF document from a LaTeX file `article.tex` with a configuration file `.latexmkrc`:
+
+```yaml
+---
+name: CI
+
+on: [push]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Generate PDF document
+        uses: hspaans/latexmk-action@v2.0.0
+        with:
+          filename: article.tex
 ```
 
 ## Keep up-to-date with GitHub Dependabot
