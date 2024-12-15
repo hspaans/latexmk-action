@@ -11,7 +11,7 @@ jobs:
     
   build-test:
     name: Container Test Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout the code
