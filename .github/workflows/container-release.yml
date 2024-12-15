@@ -12,7 +12,7 @@ on:
 jobs:
   reusable-workflow:
     name: Reusable workflow
-    uses: hspaans/.github/.github/workflows/container-release.yml@2024.12.14-1
+    uses: hspaans/.github/.github/workflows/container-release.yml@v2024.12.14-1
     with:
       actor: ${{ github.actor }}
       platforms: linux/amd64,linux/arm64
