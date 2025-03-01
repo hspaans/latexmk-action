@@ -1,4 +1,4 @@
-FROM debian:bookworm-20250113-slim
+FROM debian:bookworm-20250224-slim
 
 LABEL org.opencontainers.image.description="LaTeX container for GitHub Action latexmk"
 LABEL org.opencontainers.image.source=https://github.com/hspaans/latexmk-action
