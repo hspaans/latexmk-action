@@ -4,7 +4,7 @@ updates:
   - package-ecosystem: docker
     directory: /
     schedule:
-      interval: monthly
+      interval: daily
     groups:
       docker:
         patterns:
