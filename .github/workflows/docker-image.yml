@@ -65,4 +65,7 @@ jobs:
           push: true
           file: Dockerfile
           tags: ghcr.io/hspaans/latexmk-action:2.1
-          outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=LaTeX container for GitHub Action latexmk
+          outputs: |
+            type=image
+            name=target
+            annotation-index.org.opencontainers.image.description=LaTeX container for GitHub Action latexmk
