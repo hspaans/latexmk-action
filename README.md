@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate PDF document
-        uses: hspaans/latexmk-action@v2.0.0
+        uses: hspaans/latexmk-action@v2.1.0
         with:
           format: pdf
           filename: article.tex
@@ -55,7 +55,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate PDF document
-        uses: hspaans/latexmk-action@v2.0.0
+        uses: hspaans/latexmk-action@v2.1.0
         with:
           filename: article.tex
 ```
