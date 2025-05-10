@@ -27,7 +27,6 @@ jobs:
           
       - name: Enable auto-merge for Dependabot PRs
         if: |
-        if: |
           contains(steps.metadata.outputs.package-ecosystem, 'docker') &&
           contains(steps.metadata.outputs.dependency-names, 'debian')
         run: gh pr merge --auto --merge "$PR_URL"
