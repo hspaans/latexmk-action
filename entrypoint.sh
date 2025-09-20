@@ -4,7 +4,7 @@ set -e
 
 command_string="latexmk"
 
-if [ -f "latexmkrc" || -f ".latexmkrc" ]
+if [[ -f "latexmkrc" || -f ".latexmkrc" ]]
 then
 	echo "latexmkrc file found"
 else
