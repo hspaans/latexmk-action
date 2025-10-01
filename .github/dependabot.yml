@@ -20,23 +20,3 @@ updates:
         patterns:
           - "*"
     target-branch: master
-
-  - package-ecosystem: docker
-    directory: /
-    schedule:
-      interval: monthly
-    groups:
-      docker:
-        patterns:
-          - "*"
-    target-branch: v1
-
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: monthly
-    groups:
-      github-actions:
-        patterns:
-          - "*"
-    target-branch: v1
