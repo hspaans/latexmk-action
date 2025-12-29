@@ -1,8 +1,11 @@
 # latexmk-action
 
+> [!IMPORTANT]
+> The **v1** branch is not activily maintained anymore. Please upgrade to latest **v2**.
+
 ## Usage
 
-This GitHub Action run latexmk to convert a LaTeX file into a PDF.
+This GitHub Action run [latexmk](https://github.com/debian-tex/latexmk) to convert a LaTeX file into a PDF.
 
 ## Parameters
 
@@ -72,7 +75,7 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: daily
+      interval: monthly
 ```
 
 ## Limitation
