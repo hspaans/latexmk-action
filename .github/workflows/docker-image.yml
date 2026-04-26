@@ -5,6 +5,11 @@ on:
   push:
     branches:
       - "master"
+    paths:
+      - "Dockerfile"
+      - "docker-compose.test.yml"
+      - "entrypoint.sh"
+      - ".github/workflows/docker-image.yml"
   pull_request:
     branches:
       - "master"
@@ -13,7 +18,6 @@ on:
       - "docker-compose.test.yml"
       - "entrypoint.sh"
       - ".github/workflows/docker-image.yml"
-      - ".github/workflows/hadolint.yml"
   workflow_dispatch:
 
 jobs:
