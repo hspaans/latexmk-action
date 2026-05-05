@@ -58,7 +58,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate PDF document
-        uses: hspaans/latexmk-action@v2.1.0
+        uses: hspaans/latexmk-action@v2.1.1
         with:
           filename: article.tex
 ```
