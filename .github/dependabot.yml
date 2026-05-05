@@ -9,7 +9,6 @@ updates:
       docker:
         patterns:
           - "*"
-    target-branch: master
 
   - package-ecosystem: github-actions
     directory: /
@@ -19,4 +18,3 @@ updates:
       github-actions:
         patterns:
           - "*"
-    target-branch: master
